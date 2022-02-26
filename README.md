@@ -2,7 +2,7 @@
 The D flip flop is designed using 28nm CMOS technology by using Synopsys Custom Compiler
 
 
-#Table of Content 
+# Table of Content 
 - ABSTRACT 
 - INTRODUCTION
 - TOOLS USED
