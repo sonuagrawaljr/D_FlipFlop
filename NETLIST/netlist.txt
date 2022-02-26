@@ -1,4 +1,0 @@
-# We have two netlist files for two input 
-
-1. For Vpulse Input
-2. For Vpwl Input
