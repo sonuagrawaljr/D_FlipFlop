@@ -10,7 +10,9 @@ The D flip flop is designed using 28nm CMOS technology by using Synopsys Custom 
 - CMOS NAND GATE
 - CMOS INVERTER
 - CMOS D FLIP FLOP
-- STIMULATION 
+- SETUP & HOLD TIME
+- POWER CALCULATION 
+- SIMULATION RESULT
 - NETLIST
 - ACKNOWLEDGEMENT 
 - REFERENCE 
@@ -169,10 +171,121 @@ The CMOS design for the Inverter is shown in fig.
 
 ![image](https://user-images.githubusercontent.com/70645320/155851932-370bfd4c-d1fe-4691-98ff-b040905ce4d6.png)
 
+# SETUP TIME & HOLD TIME
 
+- Setup time  
+
+Minimum time requires for which the data should be stable before the active edge of the clock. Tcq is clock to output delay. Tdc is data to active edge difference. 
+
+
+- Setup Rise time 
+
+To calculate the setup rise time the output should be logic 0. So when the active edge comes the output becomes logic 1, for given high input. When we shift the data from left to right across the active edge of the clock, if data is far from the active edge Tcq(Clock to output delay) is stable. When data comes near to the active edge of the clock, the Tcq will start increasing after some time it fails. When data is far from the active edge the Tcq is said to be base delay. So when Tcq = 110% of base delay, At that time the value of Tdc is called setup rise time.
+
+- PRIMEWAVE PARAMETERS
+
+Here we have varried the input voltate coordinate t1 from 4.8n to 5.1n sec.
+![image](https://user-images.githubusercontent.com/70645320/155858521-ffc3da02-9240-4219-bbd0-7719892f39db.png)
+
+- TESTBENCH RESULTS
+
+From the results we have observed the tcq is 119.5p sec.
+Then for 110% of tcq is 131.45p sec. 
+![image](https://user-images.githubusercontent.com/70645320/155858638-975f719b-af83-4e90-91a5-9b36ed6dfac5.png)
+
+
+- PRIMEWAVE PARAMETERS
+Here we have varried the input voltate coordinate t1 from 5.080n to 5.085n sec.
+![image](https://user-images.githubusercontent.com/70645320/155858722-58bd8fc0-ff80-4d2d-92ff-1fe717a6cc50.png)
+
+- TESTBENCH RESULTS
+
+From the testbench result we can observe that for tcq =131.45p sec the calculated tcd= -42.1p sec
+Calculated Set up time = -42.1p sec
+![image](https://user-images.githubusercontent.com/70645320/155858746-9da3f438-cce8-419d-95b6-d69a752ad55a.png)
+
+- TESTBENCH WAVEFORM
+
+![image](https://user-images.githubusercontent.com/70645320/155858684-4ef99d0c-94a9-43eb-b2ed-0634dcfd9884.png)
+
+
+
+- Hold time 
+
+Minimum time required for which the data should be stable after the active edge of the clock.
+
+
+- Hold Rise time
+ 
+To calculate the hold rise time the output should be logic 1. So when the active edge comes the output becomes logic 0, for given high input.
+When we shift the data from right to left across the active edge of the clock, if data is far from the active edge Tcq(Clock to output delay) is stable. When data comes near to the active edge of the clock, the Tcq will start increasing after some time it fails. When data is far from the active edge the Tcq is said to be base delay. So when Tcq = 110% of base delay at that time the value of Tdc is called hold rise time.
+
+- PRIMEWAVE PARAMETERS
+
+
+Here we have varried the input voltate coordinate t2 from 5.1n to 4.8n sec. We can see the violation of tcq from the graph. After t2= 5.085n sec the output is reaching the meta unstable state.
+![image](https://user-images.githubusercontent.com/70645320/155858949-b5dfc9a2-1f3c-400c-96ad-acad086bac4f.png)
+
+- TESTBENCH RESULTS
+
+
+From the results we have observed the tcq is 136.7p sec.
+Then for 110% of tcq is 150.37p sec.
+ ![image](https://user-images.githubusercontent.com/70645320/155859078-8e10dfe9-7643-4ccb-a727-bce4289e8367.png)
+
+
+- PRIMEWAVE PARAMETERS
+
+Here we have varried the input voltate coordinate t2 from 5.086n to 5.085n sec.
+![image](https://user-images.githubusercontent.com/70645320/155859082-64b6eb51-aa5b-44a6-b541-54c734d0e3f2.png)
+
+- TESTBENCH RESULTS
+
+
+From the testbench result we can observe that for tcq =150.37p sec the calculated tcd= -39.74p sec
+Calculated Hold time = -39.74p sec
+
+![image](https://user-images.githubusercontent.com/70645320/155859154-a6b5d159-869b-4ba4-a179-7dcc61b153b1.png)
+
+
+- TESTBENCH WAVEFORM
+
+
+![image](https://user-images.githubusercontent.com/70645320/155859246-f7b6efdd-5ebd-4abd-80b1-e5560219380c.png)
+
+
+
+# POWER CALCULATION 
+
+- PRIMEWAVE PARAMETERS
+
+
+The value of average cuurent at Node vdd is calucalted for 1 GHZ clock frequency.
+![image](https://user-images.githubusercontent.com/70645320/155859450-d4d06ecb-c9b3-4e5e-b479-46ead44332a1.png)
+
+
+- TESTBENCH RESULTS
+
+
+The value of average cuurent is 1.46269u sec.
+![image](https://user-images.githubusercontent.com/70645320/155859519-78cdc96f-284b-4e9e-b542-806ec057c41a.png)
+
+
+- TESTBENCH WAVEFORM
+
+
+![image](https://user-images.githubusercontent.com/70645320/155859568-360add16-d150-4015-b1d4-932ed5b07ff6.png)
+
+
+
+# SIMULATION RESULT
+
+- Set up time = -42.1p sec
+- Hold time = -39.74p sec
+- Average Cuurent = 1.46269u sec 
 
 # AUTHOR
-Sonu Agrawal, MTech Embedded Systems, Vellore Institute of technology Vellore Tamil Nadu
+Sonu Agrawal, MTech Embedded Systems, Vellore Institute of technology, Vellore, Tamil Nadu
 
 # ACKNOWLEDGEMENT 
 
