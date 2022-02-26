@@ -42,6 +42,101 @@ the D FF can be designed using NOR or NAND gates as shown in fig. The D input is
 
 ![image](https://user-images.githubusercontent.com/70645320/155837958-ba29461d-4e27-4257-9917-a46742eaabd7.png)
 
+                                                                                                                                                                                                                                                                                                                                                                    
+
+# CMOS NAND GATE
+The CMOS design for the NAND is shown in fig. Here we have used 2 diffrent NAND gate. In NAND_2X W/L ratio for PMOS is 2 and NMOS is 1, in NAND_1X W/L ratio for PMOS is 1 and NMOS is 1.
+
+![image](https://user-images.githubusercontent.com/70645320/155849735-42887eef-69a4-4ea2-a6e8-1b4dbc9b9c14.png)
+![image](https://user-images.githubusercontent.com/70645320/155849739-13bafc32-c7b0-4483-9097-89380e561bbc.png)
+
+                                                                                                                                                                                                                                                                                                                                                                 
+
+# CMOS NAND_1X GATE 
+- SCHEMATIC
+
+![image](https://user-images.githubusercontent.com/70645320/155850129-85a12e9c-9169-4d7d-835c-688be713ee1d.png)
+
+                                                                                                                                                                                                                                                                                                                                                                            
+- SYMBOL
+
+![image](https://user-images.githubusercontent.com/70645320/155850166-17e48606-1f89-4dbf-9fa2-80026f72df1d.png)                                                                                                                                                                                                                                                                                                                                                                               
+
+- TESTBENCH SYMBOL
+
+![image](https://user-images.githubusercontent.com/70645320/155850261-fb896b6a-117d-458d-bfcb-82ecabbed77e.png)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+- PRIMEWAVE WINDOW
+
+![image](https://user-images.githubusercontent.com/70645320/155850309-fc5c3f6c-f9ca-4194-ad4c-ad019951ce00.png)                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+- TESTBENCH WAVEFORM
+
+![image](https://user-images.githubusercontent.com/70645320/155850354-6eb6664f-95c0-4bcc-a7f9-9014ec92b198.png)                                                                                                                                                                                                                                                  
+# CMOS NAND_2X GATE 
+
+- SCHEMATIC
+![image](https://user-images.githubusercontent.com/70645320/155850638-1ce89522-f48b-4d48-a95e-e8645c0439d2.png)
+
+
+- SYMBOL
+![image](https://user-images.githubusercontent.com/70645320/155850646-cb679f54-1799-42f9-a805-64192a6ae184.png)
+
+
+
+- TESTBENCH SYMBOL
+![image](https://user-images.githubusercontent.com/70645320/155850656-5101b75d-c9c6-481d-8813-469891521e18.png)
+
+
+
+- PRIMEWAVE WINDOW
+![image](https://user-images.githubusercontent.com/70645320/155850665-d08017aa-080b-4c88-ab3a-2465e0a0431a.png)
+
+
+
+- TESTBENCH WAVEFORM
+![image](https://user-images.githubusercontent.com/70645320/155850671-881ca845-76d2-4e55-924c-b9d3868dae3f.png)
+
+
+
+
+
+# CMOS INVERTER GATE
+The CMOS design for the Inverter is shown in fig.
+
+![image](https://user-images.githubusercontent.com/70645320/155850021-7845e794-bbfe-49fd-835a-991e2c7a09fa.png)
+
+- SCHEMATIC
+
+![image](https://user-images.githubusercontent.com/70645320/155850808-d456da3e-3720-42a2-a0fe-67cdafe37807.png)
+
+- SYMBOL
+
+![image](https://user-images.githubusercontent.com/70645320/155850816-6e2b4107-cbcb-4441-b1f0-923e4efaf41d.png)
+
+
+
+- TESTBENCH SYMBOL
+![image](https://user-images.githubusercontent.com/70645320/155850831-39c5474a-db91-4ab3-8da5-6546b819730d.png)
+
+
+
+- PRIMEWAVE WINDOW
+
+![image](https://user-images.githubusercontent.com/70645320/155850839-5b2822db-8415-4d7c-8690-09fab6655fa3.png)
+
+
+- TESTBENCH WAVEFORM
+
+![image](https://user-images.githubusercontent.com/70645320/155850847-e63358f7-2754-4c6e-baa0-214a0be3518f.png)
+
+
+
+
+
+
+
+
+
+
 # AUTHOR
 Sonu Agrawal, MTech Embedded Systems, Vellore Institute of technology Vellore Tamil Nadu
 
