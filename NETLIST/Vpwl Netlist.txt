@@ -1,0 +1,115 @@
+*  Generated for: PrimeSim
+*  Design library name: lib_Sonu
+*  Design cell name: tb_dff
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+.param cap=1a per_c=1n pwd_c='(0.4*per_c)' t1=5n t2=7n td_c=200p td_d=100p
++ tr_c='(0.1*per_c)' vddval=0.75 k=50p
+*Custom Compiler Version S-2021.09
+*Sat Feb 26 16:55:22 2022
+
+.global gnd!
+********************************************************************************
+* Library          : lib_Sonu
+* Cell             : NAND_2X
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt nand_2x a b vdd vout vss
+xm9 vout a net43 vss n105 w=0.1u l=0.03u nf=1 m=1
+xm10 net43 b vss vss n105 w=0.1u l=0.03u nf=1 m=1
+xm7 vout a vdd vdd p105 w=0.2u l=0.03u nf=2 m=1
+xm8 vout b vdd vdd p105 w=0.2u l=0.03u nf=2 m=1
+.ends nand_2x
+
+********************************************************************************
+* Library          : lib_Sonu
+* Cell             : NAND_1X
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt nand_1x a b vdd vout vss
+xm9 vout a net43 vss n105 w=0.1u l=0.03u nf=1 m=1
+xm10 net43 b vss vss n105 w=0.1u l=0.03u nf=1 m=1
+xm7 vout a vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+xm8 vout b vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+.ends nand_1x
+
+********************************************************************************
+* Library          : lib_Sonu
+* Cell             : Inv
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt inv vdd vss x y
+xm0 y x vss vss n105 w=0.1u l=0.03u nf=1 m=1
+xm1 y x vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+.ends inv
+
+********************************************************************************
+* Library          : lib_Sonu
+* Cell             : d_ff
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt d_ff c d q qbar vdd vss
+xi3 net120 net126 vdd net121 vss nand_2x
+xi2 net121 net126 vdd net114 vss nand_2x
+xi1 net118 net117 vdd net116 vss nand_2x
+xi0 d net117 vdd net118 vss nand_2x
+xi7 q net114 vdd qbar vss nand_1x
+xi6 net121 qbar vdd q vss nand_1x
+xi5 net120 net116 vdd net4 vss nand_1x
+xi4 net118 net4 vdd net120 vss nand_1x
+xi9 vdd vss c net117 inv
+xi8 vdd vss net117 net126 inv
+.ends d_ff
+
+********************************************************************************
+* Library          : lib_Sonu
+* Cell             : tb_dff
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi0 c d q qbar vdd vss d_ff
+v10 vss gnd! dc=0
+v11 vdd vss dc='vddval'
+v8 c vss dc=0 pulse ( 0 'vddval' 'td_c' 'tr_c' 'tr_c' 'pwd_c' 'per_c' )
+c7 qbar vss c='cap'
+c6 q vss c='cap'
+v9 d vss dc=0 pwl ( 0 'vddval' 't1' 'vddval' '(t1+k)' 0 't2' 0 '(t2+k)' 'vddval'
++  td='td_d' )
+
+
+
+
+
+
+
+
+.tran '0.001*(20n-0)' '20n' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(c) v(d) v(q) v(qbar)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
