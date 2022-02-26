@@ -128,12 +128,46 @@ The CMOS design for the Inverter is shown in fig.
 
 ![image](https://user-images.githubusercontent.com/70645320/155850847-e63358f7-2754-4c6e-baa0-214a0be3518f.png)
 
+# CMOS D FLIP FLOP
+
+-  SCHEMATIC
+
+![image](https://user-images.githubusercontent.com/70645320/155851288-65d66977-381e-4b01-b6e9-e611086f1a06.png)
 
 
+-  SYMBOL
+
+![image](https://user-images.githubusercontent.com/70645320/155851294-066a3df3-bd8d-4fd2-ba8d-cc27c26453ec.png)
+
+1. INPUT = VPULSE WAVE 
+-  TESTBENCH SYMBOL
+
+![image](https://user-images.githubusercontent.com/70645320/155851484-e33cb9af-7795-489a-92d9-a4f0abae6c08.png)
 
 
+-  PRIMEWAVE WINDOW
+
+![image](https://user-images.githubusercontent.com/70645320/155851499-66a9d6d6-9529-449f-b27b-fabc4c88a927.png)
+
+-  TESTBENCH WAVEFORM
+
+![image](https://user-images.githubusercontent.com/70645320/155851508-0cab518e-beca-4490-92bc-bcfae1ed456e.png)
 
 
+2. INPUT = VPWL WAVE
+-  TESTBENCH SYMBOL
+
+![image](https://user-images.githubusercontent.com/70645320/155851658-2a260f9c-950d-451b-9979-0ac6ed3a88bf.png)
+
+-  PRIMEWAVE WINDOW
+
+
+![image](https://user-images.githubusercontent.com/70645320/155851912-bf242eee-bc9f-47e3-a91d-8081ab920d83.png)
+
+
+-  TESTBENCH WAVEFORM
+
+![image](https://user-images.githubusercontent.com/70645320/155851932-370bfd4c-d1fe-4691-98ff-b040905ce4d6.png)
 
 
 
