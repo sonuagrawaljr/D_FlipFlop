@@ -267,7 +267,7 @@ The value of average current at Node vdd is calucalted for 1 GHZ clock frequency
 - TESTBENCH RESULTS
 
 
-The value of average current is 1.46269u sec.
+The value of average current is 1.46269u amp.
 ![image](https://user-images.githubusercontent.com/70645320/155859519-78cdc96f-284b-4e9e-b542-806ec057c41a.png)
 
 
@@ -282,7 +282,7 @@ The value of average current is 1.46269u sec.
 
 - Set up time = -42.1p sec
 - Hold time = -39.74p sec
-- Average Current = 1.46269u sec 
+- Average Current = 1.46269u amp
 
 # AUTHOR
 Sonu Agrawal, MTech Embedded Systems, Vellore Institute of technology, Vellore, Tamil Nadu
