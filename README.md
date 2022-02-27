@@ -257,6 +257,15 @@ Calculated Hold time = -39.74p sec
 
 # POWER CALCULATION 
 
+- Steps to calculate the Avg Current
+
+ 1. Take Vdd node Current from the output option(Select from the Design). I have named it as current_ff
+ 2. Open the calculator from output option and select mean filter. 
+ 3. Give Required values (current_ff, 200ps, 4.2n). We need to give the 3rd value as integer multiple of time period thats why i took it for 4 cycles(you can take any number of cycles)
+ 4. Now netlist and run the simulation
+ 5. Open viewer from the results option
+ 6. We can see the Avg Current value is 1.46269u amp
+
 - PRIMEWAVE PARAMETERS
 
 
