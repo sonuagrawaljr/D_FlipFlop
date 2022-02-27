@@ -195,7 +195,7 @@ Then for 110% of tcq is 131.45p sec.
 
 
 - PRIMEWAVE PARAMETERS
-Here we have varried the input voltate coordinate t1 from 5.080n to 5.085n sec.
+Here we have varried the input voltage coordinate t1 from 5.080n to 5.085n sec.
 ![image](https://user-images.githubusercontent.com/70645320/155858722-58bd8fc0-ff80-4d2d-92ff-1fe717a6cc50.png)
 
 - TESTBENCH RESULTS
@@ -236,7 +236,7 @@ Then for 110% of tcq is 150.37p sec.
 
 - PRIMEWAVE PARAMETERS
 
-Here we have varried the input voltate coordinate t2 from 5.086n to 5.085n sec.
+Here we have varried the input voltage coordinate t2 from 5.086n to 5.085n sec.
 ![image](https://user-images.githubusercontent.com/70645320/155859082-64b6eb51-aa5b-44a6-b541-54c734d0e3f2.png)
 
 - TESTBENCH RESULTS
